@@ -12,7 +12,7 @@ builder = Gtk.Builder()
 builder.add_from_file("ui.glade")
 
 combolist = []
-id_del_producto = -1
+id_del_producto = [0]
 
 def dar_formato_de_guaranies_a_numero(numero):
     numero_texto = "{:,}".format(numero) + " Gs"
@@ -43,8 +43,15 @@ def match_selected(completion, model, iter):
 
 def changed(combo):
     print('active', combo.get_active())
-    id_del_producto = combo.get_active()
+    id_del_producto[0] = combo.get_active()
+    productos = leer_base_de_datos_productos()
 
+    producto = productos[id_del_producto[0]]
+    precio = producto["precio"]
+    precio_texto = dar_formato_de_guaranies_a_numero(int(precio)) 
+
+    etiqueta_precio = builder.get_object("etiqueta_precio_producto")
+    etiqueta_precio.set_text(precio_texto)
 
 def configurar_lista_productos():
    store = Gtk.ListStore(str)
