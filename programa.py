@@ -70,9 +70,28 @@ configurar_boton("boton_agregar_al_pedido",accion_boton_agregar_al_pedido)
 configurar_boton("boton_pedido_cliente_listo",accion_boton_pedido_listo)
 
 
+
 ##############################
 #ventana productos
 ##############################
+def configurar_inventario():
+    etiqueta_inventario_nombre = builder.get_object("etiqueta_inventario_nombre")
+    etiqueta_inventario_precio = builder.get_object("etiqueta_inventario_precio")
+
+    
+    productos = leer_base_de_datos_productos()
+    
+    productos_nombre_texto = []
+    texto = ""
+    for producto in productos:
+        nombre = producto["nombre"]
+        productos_nombre_texto.append(nombre + "\n")
+        texto += (nombre + "\n")
+       
+    etiqueta_inventario_nombre.set_text(texto)
+    
+
+
 
 def agregar_producto_a_datos(nombre,precio,productos):
     producto = {"nombre": nombre, "precio": precio}
@@ -93,6 +112,7 @@ def accion_boton_agregar_producto(boton):
 
 configurar_boton("boton_agregar_producto",accion_boton_agregar_producto)
 
+configurar_inventario()
 configurar_lista_productos()
 
 iniciar()
