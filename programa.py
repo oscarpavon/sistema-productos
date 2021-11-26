@@ -87,7 +87,7 @@ def configurar_inventario():
         nombre = producto["nombre"]
         productos_nombre_texto.append(nombre + "\n")
         texto += (nombre + "\n")
-       
+    update = ""  
     etiqueta_inventario_nombre.set_text(texto)
     
 
