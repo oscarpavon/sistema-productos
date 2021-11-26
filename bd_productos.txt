@@ -1,0 +1,40 @@
+{
+    "productos": [
+        {
+            "nombre": "Tradicional 240ml",
+            "precio": "10000"
+        },
+        {
+            "nombre": "Tradicional 330ml",
+            "precio": "15000"
+        },
+        {
+            "nombre": "Tradicional 440ml",
+            "precio": "20000"
+        },
+        {
+            "nombre": "Oreo 240ml",
+            "precio": "12000"
+        },
+        {
+            "nombre": "Oreo 330ml",
+            "precio": "17000"
+        },
+        {
+            "nombre": "Oreo 440ml",
+            "precio": "22000"
+        },
+        {
+            "nombre": "Tres Leches  240ml",
+            "precio": "13000"
+        },
+        {
+            "nombre": "Tres Leches  330ml",
+            "precio": "18000"
+        },
+        {
+            "nombre": "Tres Leches  440ml",
+            "precio": "23000"
+        }
+    ]
+}
