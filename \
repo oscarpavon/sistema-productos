@@ -68,8 +68,10 @@ def accion_boton_agregar_al_pedido(boton):
 
 def accion_abrir_ventana_inventario(boton):
     print("inventario")
+    ventana_gastos = builder.get_object("venetana_inventario")    
     ventana_inventario = TreeViewFilterWindow()
-    ventana_inventario.connect("delete-event",cerra_ventana)
+    ventana_gastos.show()
+    ventana_gastos.connect("delete-event",cerra_ventana)
 
 configurar_boton("boton_gastos",accion_abrir_ventana_gastos)
 configurar_boton("boton_pedidos",accion_abrir_ventana_pedidos)
